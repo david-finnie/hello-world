@@ -1,0 +1,431 @@
+XR-ML58-FW01 # conf firewall address
+
+XR-ML58-FW01 (address) # show
+config firewall address
+    edit "FIREWALL_AUTH_PORTAL_ADDRESS"
+        set uuid 08adeafc-a3ce-51e9-c18b-42467788f82d
+        set visibility disable
+    next
+    edit "SSLVPN_TUNNEL_ADDR1"
+        set uuid 72f8e9a0-ba15-51e8-b01c-0ab4220b8fdc
+        set type iprange
+        set associated-interface "ssl.root"
+        set start-ip 10.212.134.200
+        set end-ip 10.212.134.210
+    next
+    edit "all"
+        set uuid 7d2a00a4-6644-51e9-d3d3-860e8a5f0513
+    next
+    edit "adobe"
+        set uuid 7488b9f8-ba15-51e8-9bca-bff8ae1850f9
+        set type wildcard-fqdn
+        set wildcard-fqdn "*.adobe.com"
+    next
+    edit "Adobe Login"
+        set uuid 7488c060-ba15-51e8-59b8-ead6ad9e0c01
+        set type wildcard-fqdn
+        set wildcard-fqdn "*.adobelogin.com"
+    next
+    edit "android"
+        set uuid 7488c6a0-ba15-51e8-f476-35caab09b15b
+        set type wildcard-fqdn
+        set wildcard-fqdn "*.android.com"
+    next
+    edit "apple"
+        set uuid 7488ccc2-ba15-51e8-870c-d82b5379113f
+        set type wildcard-fqdn
+        set wildcard-fqdn "*.apple.com"
+    next
+    edit "appstore"
+        set uuid 7488d2da-ba15-51e8-0751-6f33ef43feb0
+        set type wildcard-fqdn
+        set wildcard-fqdn "*.appstore.com"
+    next
+    edit "auth.gfx.ms"
+        set uuid 7488d906-ba15-51e8-e0ab-815013cbda81
+        set type fqdn
+        set fqdn "auth.gfx.ms"
+    next
+    edit "autoupdate.opera.com"
+        set uuid 7488df78-ba15-51e8-881a-3a9ba5ca587a
+        set type fqdn
+        set fqdn "autoupdate.opera.com"
+    next
+    edit "citrix"
+        set uuid 7488e5c2-ba15-51e8-e8cd-309383f29fda
+        set type wildcard-fqdn
+        set wildcard-fqdn "*.citrixonline.com"
+    next
+    edit "dropbox.com"
+        set uuid 7488ebee-ba15-51e8-8e5b-985b89d8d75a
+        set type wildcard-fqdn
+        set wildcard-fqdn "*.dropbox.com"
+    next
+    edit "eease"
+        set uuid 7488f210-ba15-51e8-7b43-0f47aca8be6f
+        set type wildcard-fqdn
+        set wildcard-fqdn "*.eease.com"
+    next
+    edit "firefox update server"
+        set uuid 7488f832-ba15-51e8-1d9c-987a83ec024a
+        set type wildcard-fqdn
+        set wildcard-fqdn "aus*.mozilla.org"
+    next
+    edit "fortinet"
+        set uuid 7488fe4a-ba15-51e8-7448-5822e9a44b55
+        set type wildcard-fqdn
+        set wildcard-fqdn "*.fortinet.com"
+    next
+    edit "googleapis.com"
+        set uuid 74890462-ba15-51e8-5f6d-432effc507ac
+        set type wildcard-fqdn
+        set wildcard-fqdn "*.googleapis.com"
+    next
+    edit "google-drive"
+        set uuid 74890a84-ba15-51e8-6566-59a629510679
+        set type wildcard-fqdn
+        set wildcard-fqdn "*drive.google.com"
+    next
+    edit "google-play"
+        set uuid 7489109c-ba15-51e8-df50-150e587787fc
+        set type fqdn
+        set fqdn "play.google.com"
+    next
+    edit "google-play2"
+        set uuid 748916f0-ba15-51e8-fee2-c1389fa963e2
+        set type wildcard-fqdn
+        set wildcard-fqdn "*.ggpht.com"
+    next
+    edit "google-play3"
+        set uuid 74891cfe-ba15-51e8-984f-592464d27a3d
+        set type wildcard-fqdn
+        set wildcard-fqdn "*.books.google.com"
+    next
+    edit "Gotomeeting"
+        set uuid 74892302-ba15-51e8-55e3-0324c5dedb1d
+        set type wildcard-fqdn
+        set wildcard-fqdn "*.gotomeeting.com"
+    next
+    edit "icloud"
+        set uuid 74892924-ba15-51e8-a4d3-0afdb3a1ce51
+        set type wildcard-fqdn
+        set wildcard-fqdn "*.icloud.com"
+    next
+    edit "itunes"
+        set uuid 74892f32-ba15-51e8-0be8-c59d5b7a5e8e
+        set type wildcard-fqdn
+        set wildcard-fqdn "*itunes.apple.com"
+    next
+    edit "microsoft"
+        set uuid 74893536-ba15-51e8-06e5-d042769ca34d
+        set type wildcard-fqdn
+        set wildcard-fqdn "*.microsoft.com"
+    next
+    edit "skype"
+        set uuid 74893b4e-ba15-51e8-7f7b-c9bc3599a1c6
+        set type wildcard-fqdn
+        set wildcard-fqdn "*.messenger.live.com"
+    next
+    edit "softwareupdate.vmware.com"
+        set uuid 74894170-ba15-51e8-bcd7-3c3d1ddb57ff
+        set type fqdn
+        set fqdn "softwareupdate.vmware.com"
+    next
+    edit "swscan.apple.com"
+        set uuid 748947ba-ba15-51e8-5cfd-810ac27cd9e6
+        set type fqdn
+        set fqdn "swscan.apple.com"
+    next
+    edit "update.microsoft.com"
+        set uuid 74894e04-ba15-51e8-ece9-dc0f80469249
+        set type fqdn
+        set fqdn "update.microsoft.com"
+    next
+    edit "verisign"
+        set uuid 74895444-ba15-51e8-34bd-5938b3b5ccce
+        set type wildcard-fqdn
+        set wildcard-fqdn "*.verisign.com"
+    next
+    edit "Windows update 2"
+        set uuid 74895a5c-ba15-51e8-cd53-a0f75d341945
+        set type wildcard-fqdn
+        set wildcard-fqdn "*.windowsupdate.com"
+    next
+    edit "10.0.0.0/8"
+        set uuid 51511d1e-c63f-51e8-32bc-c189139828c8
+        set allow-routing enable
+        set subnet 10.0.0.0 255.0.0.0
+    next
+    edit "172.16.0.0/12"
+        set uuid 515168be-c63f-51e8-17c2-1f035358430b
+        set allow-routing enable
+        set subnet 172.16.0.0 255.240.0.0
+    next
+    edit "192.168.0.0/16"
+        set uuid 59adf194-c63f-51e8-fcb7-dd28e12e1226
+        set allow-routing enable
+        set subnet 192.168.0.0 255.255.0.0
+    next
+    edit "XeroAWS_PROD_10.101.0.0/18"
+        set uuid a142c4be-106c-51e8-0ed0-f26c8178de15
+        set allow-routing enable
+        set subnet 10.101.0.0 255.255.192.0
+    next
+    edit "XeroAWS_UAT_10.126.64.0/18"
+        set uuid a142ed86-106c-51e8-fb60-a70859974a64
+        set allow-routing enable
+        set subnet 10.126.64.0 255.255.192.0
+    next
+    edit "XeroAWS_TEST_10.96.0.0/16"
+        set uuid a1430e10-106c-51e8-30d2-ed4d11a78eaf
+        set allow-routing enable
+        set subnet 10.96.0.0 255.255.0.0
+    next
+    edit "XeroAWS_TEST_10.129.0.0/16"
+        set uuid a14334f8-106c-51e8-0c01-b5bbfbff48ac
+        set allow-routing enable
+        set subnet 10.129.0.0 255.255.0.0
+    next
+    edit "XeroAWS_TEST_10.132.0.0/18"
+        set uuid a1436446-106c-51e8-565f-c27778564b21
+        set allow-routing enable
+        set subnet 10.132.0.0 255.255.192.0
+    next
+    edit "XeroAWS_TEST_10.136.0.0/16"
+        set uuid a5d61e54-106c-51e8-1a77-89efb81152b2
+        set allow-routing enable
+        set subnet 10.136.0.0 255.255.0.0
+    next
+    edit "XeroAWS_TEST_10.137.0.0/16"
+        set uuid a5d65112-106c-51e8-6f07-9c8ceeab7b25
+        set allow-routing enable
+        set subnet 10.137.0.0 255.255.0.0
+    next
+    edit "XeroAWS_TEST_10.130.48.0/20"
+        set uuid a5d67b6a-106c-51e8-e409-eddf20a2a144
+        set allow-routing enable
+        set subnet 10.130.48.0 255.255.240.0
+    next
+    edit "XeroAWS_TEST_10.130.0.0/20"
+        set uuid a5d6a888-106c-51e8-3039-89bbf4665c69
+        set allow-routing enable
+        set subnet 10.130.0.0 255.255.240.0
+    next
+    edit "XeroAWS_TEST_10.130.112.0/20"
+        set uuid a5d6db3c-106c-51e8-c36c-8f52fdec2bb3
+        set allow-routing enable
+        set subnet 10.130.112.0 255.255.240.0
+    next
+    edit "XeroAWS_TEST_10.133.0.0/22"
+        set uuid a5d71034-106c-51e8-bbc5-f788bbc84169
+        set allow-routing enable
+        set subnet 10.133.0.0 255.255.252.0
+    next
+    edit "XeroAWS_TEST_10.130.208.0/20"
+        set uuid 1cd2c9fc-1aaa-51e8-d007-4e0c5f6efa9c
+        set allow-routing enable
+        set subnet 10.130.208.0 255.255.240.0
+    next
+    edit "XeroAWS_TEST_10.130.16.0/20"
+        set uuid 5221c4c8-1aaa-51e8-0da3-d05588adabda
+        set allow-routing enable
+        set subnet 10.130.16.0 255.255.240.0
+    next
+    edit "XeroAWS_TEST_10.134.32.0/20"
+        set uuid 5222ac8a-1aaa-51e8-9a58-e91cb2c73853
+        set allow-routing enable
+        set subnet 10.134.32.0 255.255.240.0
+    next
+    edit "XeroAWS_TEST_10.134.48.0/20"
+        set uuid 5222feba-1aaa-51e8-aa0b-1b88e01b670a
+        set allow-routing enable
+        set subnet 10.134.48.0 255.255.240.0
+    next
+    edit "XeroAWS_TEST_10.130.32.0/20"
+        set uuid 52235d60-1aaa-51e8-29ca-ca721eba3fd2
+        set allow-routing enable
+        set subnet 10.130.32.0 255.255.240.0
+    next
+    edit "XeroAWS_TEST_10.135.0.0/16"
+        set uuid 5223c304-1aaa-51e8-e454-6db3cfa28175
+        set allow-routing enable
+        set subnet 10.135.0.0 255.255.0.0
+    next
+    edit "XeroAWS_TEST_10.130.64.0/20"
+        set uuid 5224290c-1aaa-51e8-754c-a98f70aa874f
+        set allow-routing enable
+        set subnet 10.130.64.0 255.255.240.0
+    next
+    edit "XeroAWS_TEST_10.130.80.0/20"
+        set uuid 52248eba-1aaa-51e8-1166-4a47f1b175d2
+        set allow-routing enable
+        set subnet 10.130.80.0 255.255.240.0
+    next
+    edit "XeroAWS_TEST_10.130.96.0/20"
+        set uuid 5224f256-1aaa-51e8-71a2-42a883f4e69c
+        set allow-routing enable
+        set subnet 10.130.96.0 255.255.240.0
+    next
+    edit "XeroAWS_TEST_10.130.128.0/20"
+        set uuid 58459780-1aaa-51e8-90be-c30d6daf33d3
+        set allow-routing enable
+        set subnet 10.130.128.0 255.255.240.0
+    next
+    edit "XeroAWS_TEST_10.130.160.0/20"
+        set uuid 5845ec08-1aaa-51e8-5a01-e64eff900ed5
+        set allow-routing enable
+        set subnet 10.130.160.0 255.255.240.0
+    next
+    edit "XeroAWS_TEST_10.130.176.0/20"
+        set uuid 58464c20-1aaa-51e8-0199-695d53580ee6
+        set allow-routing enable
+        set subnet 10.130.176.0 255.255.240.0
+    next
+    edit "XeroAWS_TEST_10.130.224.0/20"
+        set uuid 5846b412-1aaa-51e8-f529-9fb39d1ba9ec
+        set allow-routing enable
+        set subnet 10.130.224.0 255.255.240.0
+    next
+    edit "XeroAWS_TEST_10.130.240.0/20"
+        set uuid 58471a38-1aaa-51e8-a261-9b942ab2bd84
+        set allow-routing enable
+        set subnet 10.130.240.0 255.255.240.0
+    next
+    edit "XeroAWS_TEST_10.131.0.0/20"
+        set uuid 584775d2-1aaa-51e8-229c-15f72fa2d6a0
+        set allow-routing enable
+        set subnet 10.131.0.0 255.255.240.0
+    next
+    edit "XeroAWS_TEST_10.131.48.0/20"
+        set uuid 5847d31a-1aaa-51e8-5397-5891e41f2020
+        set allow-routing enable
+        set subnet 10.131.48.0 255.255.240.0
+    next
+    edit "XeroAWS_TEST_10.128.0.0/16"
+        set uuid 5cecf80a-1aaa-51e8-f938-5061fb20a053
+        set allow-routing enable
+        set subnet 10.128.0.0 255.255.0.0
+    next
+    edit "XeroAWS_TEST_10.130.192.0/20"
+        set uuid 5ced90bc-1aaa-51e8-4809-f058a56630f1
+        set allow-routing enable
+        set subnet 10.130.192.0 255.255.240.0
+    next
+    edit "XeroAWS_TEST_10.131.96.0/20"
+        set uuid 5cee9674-1aaa-51e8-5f1a-0d200c564fa7
+        set allow-routing enable
+        set subnet 10.131.96.0 255.255.240.0
+    next
+    edit "XeroAWS_TEST_10.138.0.0/16"
+        set uuid 5cef000a-1aaa-51e8-cb05-d40ecf3553d8
+        set allow-routing enable
+        set subnet 10.138.0.0 255.255.0.0
+    next
+    edit "XeroAWS_TEST_10.139.0.0/16"
+        set uuid 5cef5ae6-1aaa-51e8-ce55-5ea052195c4f
+        set allow-routing enable
+        set subnet 10.139.0.0 255.255.0.0
+    next
+    edit "XeroAWS_TEST_10.131.176.0/20"
+        set uuid 5cefb6bc-1aaa-51e8-541b-b2832138e8a3
+        set allow-routing enable
+        set subnet 10.131.176.0 255.255.240.0
+    next
+    edit "AzureAUEast-Vnet224"
+        set uuid adb3303a-106c-51e8-18bb-18043b79b049
+        set allow-routing enable
+        set subnet 10.224.0.0 255.255.0.0
+    next
+    edit "AzureUSWest-Vnet232"
+        set uuid adb35a7e-106c-51e8-7504-7d9aceba4e25
+        set allow-routing enable
+        set subnet 10.232.0.0 255.255.0.0
+    next
+    edit "Azure-Vnet226"
+        set uuid 41483d90-1b49-51e8-dcfc-446e9e2cea5f
+        set allow-routing enable
+        set subnet 10.226.0.0 255.255.0.0
+    next
+    edit "Azure-Vnet240"
+        set uuid 4df203dc-1b49-51e8-4b5f-080b9722cc59
+        set allow-routing enable
+        set subnet 10.240.0.0 255.255.0.0
+    next
+    edit "Net-Nspire-LAN-Management"
+        set uuid 5718a38e-3e95-51e8-a994-e510c1e33e2b
+        set allow-routing enable
+        set subnet 10.55.0.0 255.255.255.0
+    next
+    edit "VL10_CorpLAN"
+        set uuid 3d7dce68-bb09-51e8-b576-87d545877b24
+        set subnet 10.58.10.0 255.255.254.0
+    next
+    edit "VL30_CorpWIFI"
+        set uuid 649e68fe-bb09-51e8-1c4f-0a92d5815328
+        set subnet 10.58.30.0 255.255.254.0
+    next
+    edit "VL50_CCTV"
+        set uuid 84519784-bb09-51e8-2358-2c6936da942f
+        set subnet 10.58.50.0 255.255.255.0
+    next
+    edit "VL5_Mgmt"
+        set uuid 9f9c2e96-bb09-51e8-8c0e-f4bdabf2f745
+        set subnet 10.58.5.0 255.255.255.0
+    next
+    edit "VL60_DoorAccess"
+        set uuid e0eafd06-bb08-51e8-9065-1ef8b039e5ca
+        set subnet 10.58.60.0 255.255.255.0
+    next
+    edit "VL6_AP_Mgmt"
+        set uuid 0784ade0-bb09-51e8-5380-244750c22a4d
+        set subnet 10.58.6.0 255.255.255.0
+    next
+    edit "VL70_Lockers"
+        set uuid 1a803836-bb0b-51e8-b34c-ab4ce8554fc0
+        set subnet 10.58.70.0 255.255.255.0
+    next
+    edit "VL99_GuestWIFI"
+        set uuid 9562c5f0-bcc8-51e8-b5ab-9549b5a7f0be
+        set subnet 10.58.98.0 255.255.254.0
+    next
+    edit "XR-ML58-VL50_CCTV"
+        set uuid 6cdaf488-bccb-51e8-97da-ec8976e3599b
+        set subnet 10.58.50.0 255.255.255.0
+    next
+    edit "XR-ML60-VL50_CCTV"
+        set uuid 7ba46486-bccb-51e8-4522-aefebb85e1a5
+        set subnet 10.60.50.0 255.255.255.0
+    next
+    edit "XR-WN52-VL10_BuildSvr_10.52.11.203"
+        set uuid bf7e0978-eae3-51e8-abcb-ff6a9e3b8f0d
+        set subnet 10.52.11.203 255.255.255.255
+    next
+    edit "XR-WN52-VL10_BuildSvr_10.52.11.204"
+        set uuid cdec04ba-eae3-51e8-6ffd-b0bcdcd945c1
+        set subnet 10.52.11.204 255.255.255.255
+    next
+    edit "XR-ML58-VL10_BuildSvr_10.58.10.113"
+        set uuid b21fe972-eae3-51e8-7a0d-78eaf700b998
+        set subnet 10.58.10.113 255.255.255.255
+    next
+    edit "Net-Brennan-210.18.244.0/23"
+        set uuid 2bc072c6-393e-51e9-43d5-562f3a8fa28f
+        set allow-routing enable
+        set subnet 210.18.244.0 255.255.254.0
+    next
+    edit "Net-Brennan-210.18.250.0/23"
+        set uuid 0d5abaa8-393e-51e9-1515-594256c74ba7
+        set allow-routing enable
+        set subnet 210.18.250.0 255.255.254.0
+    next
+    edit "XR-ML58-VL10_BuildSvr_10.58.10.140"
+        set uuid a6f36652-4c20-51e9-908c-a115f09219ac
+        set subnet 10.58.10.140 255.255.255.255
+    next
+    edit "XR-ML56-VL50_CCTV"
+        set uuid 3688a802-67a8-51e9-b881-e66c0660bef2
+        set subnet 10.56.50.0 255.255.255.0
+    next
+end
+
+XR-ML58-FW01 (address) #
